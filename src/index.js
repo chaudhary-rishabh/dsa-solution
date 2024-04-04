@@ -4,10 +4,39 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Error from './pages/Error';
+import Home from './pages/Home';
+import Solution from './pages/Solution';
+import CategoryList from './pages/CategoryList';
+import Blog from './pages/Blog';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index element={<Home />} />
+      <Route path="solution" element={<Solution />} />
+      <Route path="blog" element={<Blog />} />
+      <Route path="categorylist" element={<CategoryList />}>
+        <Route path="single" element={<Blog />} />
+      </Route>
+      <Route path="*" element={<Error/>} />
+    </Route>
+  )
+  );
+  
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
