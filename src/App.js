@@ -1,9 +1,14 @@
 import './App.css';
+import AlgorithmsPreview from './components/AlgorithmsPreview';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
-      <h1>DSA - Solutions</h1>
+      <Header/>
+        <AlgorithmsPreview/>
+      <Footer/>
     </div>
   );
 }
