@@ -7,9 +7,11 @@ import leetcode_logo from "../images/leetcode-logo.png"
 
 const navigation = [
   { name: 'Home', href: '#', current: true },
-  { name: 'Category', href: '#', current: false },
-  { name: 'Other', href: '#', current: false },
-  { name: 'Socials', href: 'https://linktr.ee/rishabh_chaudhary', current: false },
+  { name: 'Projects', href: '#', current: false },
+  { name: 'DSA', href: '#', current: false },
+  { name: 'Frontend', href: '#', current: false },
+  { name: 'Backend', href: '#', current: false },
+  // { name: 'Socials', href: 'https://linktr.ee/rishabh_chaudhary', current: false },
 ]
 
 function classNames(...classes) {
@@ -18,10 +20,10 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="fixed max-w-7xl mx-auto top-4 left-0 right-0 z-50 rounded-3xl bg-blue-900 bg-opacity-50">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}

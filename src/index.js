@@ -15,12 +15,20 @@ import Home from './pages/Home';
 import Solution from './pages/Solution';
 import CategoryList from './pages/CategoryList';
 import Blog from './pages/Blog';
+import Dsa from './pages/Dsa';
+import Projects from './pages/Projects';
+import Frontend from './pages/Frontend';
+import Backend from './pages/Backend';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />
+      <Route path="dsa" element={<Dsa />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="frontend" element={<Frontend />} />
+      <Route path="backend" element={<Backend />} />
       <Route path="solution" element={<Solution />} />
       <Route path="blog" element={<Blog />} />
       <Route path="categorylist" element={<CategoryList />}>
