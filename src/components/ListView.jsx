@@ -16,100 +16,79 @@ const people = [
   {
     name: ' ',
     email: ' ',
-    role: ' ',
     imageUrl:'',
-    lastSeen: ' ',
-    lastSeenDateTime: '  ',
   },
   {
     name: ' ',
     email: ' ',
-    role: ' ',
     imageUrl:
       '',
-    lastSeen: ' ',
-    lastSeenDateTime: '  ',
   },
   {
     name: 'Array',
     icon: '&#10230;',
     imageUrl:array,
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23T13:23Z',
   },
   {
     name: 'String',
     icon: '&#10230;',
     imageUrl:string,
-    lastSeen: null,
   },
   {
     name: 'Stack',
     icon: '&#10230;',
     imageUrl:stack,
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23T13:23Z',
   },
   {
     name: 'Queue',
     icon: '&#10230;',
     imageUrl:queue,
-    lastSeen: '3h ago',
-    lastSeenDateTime: '2023-01-23T13:23Z',
   },
   {
     name: 'LinkedList',
     icon: '&#10230;',
     imageUrl:linkedlist,
-    lastSeen: null,
   },
   {
     name: 'Map',
     icon: '&#10230;',
     imageUrl: map,
-    lastSeen: null,
   },
   {
     name: 'Graph',
     icon: '&#10230;',
     imageUrl:graph,
-    lastSeen: null,
   },
   {
     name: 'Tree',
     icon: '&#10230;',
     imageUrl:binarytree,
-    lastSeen: null,
   },
   {
     name: 'Trie',
     icon: '&#10230;',
     imageUrl:trie,
-    lastSeen: null,
   },
   {
     name: 'Hashing',
     icon: '&#10230;',
     imageUrl:hashingdsa,
-    lastSeen: null,
   },
   {
     name: 'Sorting',
     icon: '&#10230;',
     imageUrl:sorting,
-    lastSeen: null,
   },
   {
     name: 'Searching',
     icon: '&#10230;',
     imageUrl:searching,
-    lastSeen: null,
   },
 ]
 
 export default function ListView() {
   return (
-    <ul role="list" className="divide-y bg-black divide-gray-950">
+    <ul role="list" className="divide-y bg-black divide-black">
       {people.map((person) => (
         <li key={person.email} className="flex justify-between gap-x-6 py-5">
           <div className="flex min-w-0 gap-x-4">
