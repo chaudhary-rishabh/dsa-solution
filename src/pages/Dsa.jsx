@@ -1,8 +1,11 @@
 import React from 'react'
+import ListView from '../components/ListView'
 
 const Dsa = () => {
   return (
-    <div>Dsa</div>
+    <div>
+      <ListView/>
+    </div>
   )
 }
 

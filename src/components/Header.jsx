@@ -8,7 +8,7 @@ import leetcode_logo from "../images/leetcode-logo.png"
 const navigation = [
   { name: 'Home', href: '#', current: true },
   { name: 'Projects', href: '#', current: false },
-  { name: 'DSA', href: '#', current: false },
+  { name: 'DSA', href: '/dsa', current: false },
   { name: 'Frontend', href: '#', current: false },
   { name: 'Backend', href: '#', current: false },
   // { name: 'Socials', href: 'https://linktr.ee/rishabh_chaudhary', current: false },
