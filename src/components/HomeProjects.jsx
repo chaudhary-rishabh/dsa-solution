@@ -1,6 +1,6 @@
 const features = [
   { name: 'Projects', description: 'Frontend Backend projects fullstack' },
-  { name: 'DSA', description: 'DSA' },
+  { name: 'DSA', description: 'DSA DSADSADSADSADSA DSA ' },
   { name: 'Frontend', description: 'Frontend components' },
   { name: 'Backend', description: 'backend components' },
   { name: 'Algorithms', description: 'algorithms' },

@@ -1,16 +1,16 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from "react-router-dom"
 
 import logo from "../images/main-logo.png"
-import leetcode_logo from "../images/leetcode-logo.png"
+import portfoliologo from "../images/rishabhdev-portfoliologo.png"
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Projects', href: '#', current: false },
+  { name: 'Projects', href: '/projects', current: false },
   { name: 'DSA', href: '/dsa', current: false },
-  { name: 'Frontend', href: '#', current: false },
-  { name: 'Backend', href: '#', current: false },
+  { name: 'Frontend', href: '/frontend', current: false },
+  { name: 'Backend', href: '/backend', current: false },
   // { name: 'Socials', href: 'https://linktr.ee/rishabh_chaudhary', current: false },
 ]
 
@@ -39,11 +39,11 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                  <Link to="/"><img
                     className="h-8 w-auto"
                     src={logo}
                     alt="Your Company"
-                  />
+                  /></Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -68,7 +68,10 @@ export default function Header() {
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <img className="h-8 w-auto" src={leetcode_logo} alt="leetcode logo"/>
+                  <a href="https://chaudharyrishabh.com/" target="_blank" rel="noopener noreferrer">
+                    <img className="h-8 w-auto rounded-xl" src={portfoliologo} alt="portfolio logo"/>
+                  </a>
+
                 </button>
 
                 {/* Profile dropdown */}
