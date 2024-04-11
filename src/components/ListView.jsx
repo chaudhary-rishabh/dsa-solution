@@ -10,6 +10,7 @@ import hashingdsa from "../images/hashing-dsa.jpeg"
 import binarytree from "../images/binarytree-dsa.jpeg"
 import searching from "../images/rishabhdev7.jpeg"
 import sorting from "../images/rishabhdev8.jpeg"
+import { NavLink } from "react-router-dom"
 
 
 const people = [
@@ -86,7 +87,7 @@ const people = [
   },
 ]
 
-export default function ListView() {
+export default function ListView(props) {
   return (
     <ul role="list" className="divide-y bg-black divide-black">
       {people.map((person) => (
@@ -95,7 +96,7 @@ export default function ListView() {
             {person.imageUrl !== '' ? (<img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" /> ): (<p></p>)}
             <div className="min-w-0 flex-auto">
               <p className="text-sm font-semibold leading-6 text-white">{person.name}</p>
-              {person.imageUrl !== '' ? (<p className="text-xs leading-5 cursor-pointer text-blue-500">Explore all &#10230;</p> ): (<p></p>)}
+              {person.imageUrl !== '' ? (<NavLink to="/dsa/categorylist"><p className="text-xs leading-5 cursor-pointer text-blue-500">Explore all &#10230;</p></NavLink> ): (<p></p>)}
               
             </div>
           </div>

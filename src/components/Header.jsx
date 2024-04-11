@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 import logo from "../images/main-logo.png"
 import portfoliologo from "../images/rishabhdev-portfoliologo.png"
@@ -11,7 +11,6 @@ const navigation = [
   { name: 'DSA', href: '/dsa', current: false },
   { name: 'Frontend', href: '/frontend', current: false },
   { name: 'Backend', href: '/backend', current: false },
-  // { name: 'Socials', href: 'https://linktr.ee/rishabh_chaudhary', current: false },
 ]
 
 function classNames(...classes) {
@@ -39,18 +38,18 @@ export default function Header() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/"><img
+                  <NavLink to="/"><img
                     className="h-8 w-auto"
                     src={logo}
                     alt="Your Company"
-                  /></Link>
+                  /></NavLink>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <NavLink
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
@@ -58,7 +57,7 @@ export default function Header() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
