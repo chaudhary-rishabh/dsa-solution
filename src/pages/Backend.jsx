@@ -1,8 +1,12 @@
 import React from 'react'
+import HomeComponentsBackend from '../components/HomeComponentsBackend'
 
 const Backend = () => {
   return (
-    <div>Backend</div>
+    <div>
+      <HomeComponentsBackend/>
+      <HomeComponentsBackend/>
+    </div>
   )
 }
 

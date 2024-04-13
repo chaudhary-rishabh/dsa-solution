@@ -1,8 +1,11 @@
 import React from 'react'
+import HomeComponents from '../components/HomeComponents'
 
 const Frontend = () => {
   return (
-    <div>Frontend</div>
+    <div>
+      <HomeComponents/>
+    </div>
   )
 }
 
