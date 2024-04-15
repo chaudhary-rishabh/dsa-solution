@@ -12,11 +12,11 @@ const products = [
   // More products...
 ]
 
-export default function HomeComponentsBackend() {
+export default function HomeComponentsBackend(props) {
   return (
     <div className="bg-black">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-white">Backend APIs</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-white">{`${props.heading }` || "Backend API"}</h2>
 
         <div className="mt-6 grid grid-cols-1 bg-black shadow-sm shadow-offset-x-6 shadow-offset-y-2 shadow-white rounded-xl gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {products.map((product) => (
@@ -31,14 +31,14 @@ export default function HomeComponentsBackend() {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href={product.href}>
+                    <a href={`${props.heading }` || "Backend API"}>
                       <span aria-hidden="true" className="absolute inset-0" />
-                      {product.name}
+                      {`${props.name }` || "Backend API"}
                     </a>
                   </h3>
-                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                  <p className="mt-1 text-sm text-gray-500">{`${props.color}` || "blue"}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                <p className="text-sm font-medium text-gray-900">{`${props.price }` || "3233"}</p>
               </div>
             </div>
           ))}
